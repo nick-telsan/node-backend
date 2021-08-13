@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+
+  node-backend:
+    working_dir: /app
+    restart: always
+    build:
+      context: .
+    volumes:
+      - .:/app:delegated
+    command: yarn dev
+    ports:
+      - 4000:4000
+
+volumes:
+  db:

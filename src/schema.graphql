@@ -1,0 +1,12 @@
+type Query {
+  getAllAnimals: [Animal]
+}
+
+type Mutation {
+  addAnimal(name: String!, fact: String): Animal
+}
+
+type Animal {
+  name: String!
+  fact: String
+}
