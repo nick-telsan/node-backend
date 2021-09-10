@@ -17,9 +17,13 @@ services:
       context: .
     volumes:
       - .:/app:delegated
+      - node_modules:/app/node-backend/node_modules
     command: yarn dev
     ports:
       - 4000:4000
+    depends_on: 
+      - db
 
 volumes:
   db:
+  node_modules:
