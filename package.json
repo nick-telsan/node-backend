@@ -9,10 +9,10 @@
   "dependencies": {
     "@prisma/client": "^2.29.1",
     "apollo-server": "^3.1.2",
-    "graphql": "^15.5.1",
-    "nodemon": "^2.0.12"
+    "graphql": "^15.5.1"
   },
   "devDependencies": {
+    "nodemon": "^2.0.12",
     "prisma": "^2.29.1"
   }
 }
